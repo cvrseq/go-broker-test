@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the application
-RUN CGO_ENABLED=1 GOOS=linux go build -o worker ./cmd/worker
+RUN CGO_ENABLED=1 GOOS=linux go build -o worker .
 
 # Final stage
 FROM alpine:latest
